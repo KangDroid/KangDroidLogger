@@ -42,13 +42,13 @@ unset(_expectedTargets)
 
 
 # Create imported target KangDroidLogger::KangDroidLogger
-add_library(KangDroidLogger::KangDroidLogger SHARED IMPORTED)
+add_library(KangDroidLogger::KangDroidLogger STATIC IMPORTED)
 
 # Import target "KangDroidLogger::KangDroidLogger" for configuration "Release"
 set_property(TARGET KangDroidLogger::KangDroidLogger APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(KangDroidLogger::KangDroidLogger PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${CMAKE_PREFIX_PATH}/lib/libKangDroidLogger.dylib"
-  IMPORTED_SONAME_RELEASE "@rpath/libKangDroidLogger.dylib"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${CMAKE_PREFIX_PATH}/lib/libKangDroidLogger.a"
   )
 
 # This file does not depend on other imported targets which have
