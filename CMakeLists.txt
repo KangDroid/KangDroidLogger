@@ -7,3 +7,5 @@ install(TARGETS KangDroidLogger
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 install(FILES Logger.h
         DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
+install(FILES cmake/KangDroidLoggerConfig.cmake
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/KangDroidLogger/)
