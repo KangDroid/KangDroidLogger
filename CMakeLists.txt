@@ -3,6 +3,9 @@ project(KangDroidLogger)
 set(CMAKE_MACOSX_RPATH 1)
 add_library(KangDroidLogger SHARED Logger.cpp)
 
+set(CMAKE_INSTALL_PREFIX "/Users/kangdroid/Desktop/test")
+set(CMAKE_BUILD_TYPE "Release")
+
 install(TARGETS KangDroidLogger
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 install(FILES Logger.h
